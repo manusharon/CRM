@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenAPI v1 — TravelOS</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>pre{white-space:pre-wrap;word-break:break-word;max-height:70vh;overflow:auto;padding:12px;border-radius:8px;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.03)}</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">TravelOS<span class="dot">.</span></a></div>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/prd.html">PRD</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="card-gloss">
+      <h1>OpenAPI v1 (Auth / Visa / Chat / Agency)</h1>
+      <pre>
+openapi: 3.0.3
+info:
+  title: Travel OS - Core API (v1)
+  version: "1.0.0"
+servers:
+  - url: https://api.yourplatform.com/api/v1
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        mobile:
+          type: string
+        preferred_language:
+          type: string
+        preferred_currency:
+          type: string
+    Agency:
+      type: object
+      properties:
+        id: string
+        name: string
+        state: string
+        city: string
+        status: string
+        specialization_countries:
+          type: array
+          items: { type: string }
+... (truncated here in preview)
+      </pre>
+      <p class="muted">Full YAML file is available in the repository as <code>openapi_v1.yaml</code>.</p>
+    </section>
+  </main>
+</body>
+</html>

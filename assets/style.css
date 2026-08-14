@@ -1,0 +1,39 @@
+/* Dark glossy theme (glassmorphism) */
+:root{
+  --bg:#0b0f13;
+  --card:#0f1720cc;
+  --glass:#0f172040;
+  --accent:#00b4d8;
+  --muted:#9aa4ad;
+  --glass-border: rgba(255,255,255,0.06);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: radial-gradient(1000px 600px at 10% 10%, rgba(12,17,25,0.6), transparent), linear-gradient(180deg,#06070a 0%,#0b0f13 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;padding:18px 36px;background:transparent;border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.brand{font-weight:700;font-size:20px;letter-spacing:0.6px}
+.brand .dot{color:var(--accent);margin-left:6px}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.container{max-width:1000px;margin:30px auto;padding:0 20px}
+.hero{padding:28px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 30px rgba(2,6,23,0.6);backdrop-filter: blur(8px);border:1px solid var(--glass-border)}
+.hero h1{margin:0 0 8px 0;font-size:32px}
+.lead{color:var(--muted);margin-top:6px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+.btn-primary{background:linear-gradient(180deg,var(--accent),#008bb3);color:#00121a;box-shadow:0 6px 18px rgba(0,180,216,0.18)}
+.btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent;margin-left:10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:22px}
+.card-gloss{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 30px rgba(3,8,16,0.6)}
+.card-gloss h3{margin-top:0}
+.footer{margin-top:28px;padding:12px;display:flex;justify-content:space-between;align-items:center;border-radius:10px}
+.muted{color:var(--muted);font-size:13px}
+ul{margin:8px 0 0 18px}
+ol{margin:8px 0 0 18px}
+@media (max-width:600px){.topbar{padding:12px}.container{margin:18px}}

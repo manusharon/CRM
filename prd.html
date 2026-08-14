@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRD — TravelOS MVP</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">TravelOS<span class="dot">.</span></a></div>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/wireframes.html">Wireframes</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="card-gloss">
+      <h1>Product Requirements Document — TravelOS (MVP)</h1>
+      <p class="muted">Summary & acceptance criteria</p>
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0 18px 0">
+      <h2>Summary</h2>
+      <p>MVP objective: Deliver a production-ready travel booking platform core that enables flight booking, payment, agency onboarding, visa lead marketplace with document upload and OCR, in-app chat & call bridging, admin dashboard (live feed), and foundational AI VisaAgent matching/dispatch. Must be secure, multi-language (English + Tamil + Malayalam initially), multi-currency, and able to scale.</p>
+
+      <h3>Target users</h3>
+      <ul>
+        <li>Consumers (B2C): Individual travelers (India-first; global expansion later).</li>
+        <li>Agencies (B2B): Travel agencies in Kerala & Tamil Nadu initially.</li>
+        <li>Admin / Ops: Platform operators (finance, operations, support).</li>
+      </ul>
+
+      <h3>MVP Modules (Priority)</h3>
+      <ol>
+        <li>Authentication & Profiles</li>
+        <li>Flight search & booking (single aggregator + caching)</li>
+        <li>Payments (Stripe + Razorpay)</li>
+        <li>Agency Onboarding (apply + KYC upload)</li>
+        <li>Visa Marketplace (request, upload docs, match, ping agencies, accept/decline)</li>
+        <li>In-app Chat & Call bridging (Twilio) for customer ↔ assigned agency communications</li>
+        <li>Document Vault + OCR</li>
+        <li>Admin Live Feed & Dashboard</li>
+        <li>Basic SUI (VisaAgent prototype)</li>
+        <li>Google Sheets sync worker</li>
+      </ol>
+
+      <h3>Acceptance Criteria (selected)</h3>
+      <ul>
+        <li>Signups validate OTP within 5 minutes</li>
+        <li>Payment webhooks mark bookings as confirmed</li>
+        <li>Visa requests ping at least K agencies and create chat on acceptance</li>
+        <li>OCR extracts passport fields with acceptable confidence in demo</li>
+      </ul>
+
+      <p class="muted">Full PRD available on the repository.</p>
+    </section>
+  </main>
+</body>
+</html>
